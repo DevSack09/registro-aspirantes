@@ -1,0 +1,58 @@
+---
+// Navbar component with theme toggle and support
+---
+
+<header class="bg-white dark:bg-gray-800 shadow-lg transition-all duration-300 hover:shadow-xl">
+	<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="flex justify-between items-center h-16">
+			<!-- Logo and Title -->
+			<div class="flex items-center space-x-3">
+				<div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center transform transition-transform duration-200 hover:scale-105">
+					<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A9.002 9.002 0 0112 21c-4.474 0-8.268-3.12-9.255-7.255A9.002 9.002 0 0112 3c4.474 0 8.268 3.12 9.255 7.255z"/>
+					</svg>
+				</div>
+				<h1 class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+					Sistema de Reclutamiento
+				</h1>
+			</div>
+
+			<!-- Navigation Items -->
+			<div class="flex items-center space-x-4">
+				<!-- Theme Toggle -->
+				<button 
+					onclick="toggleTheme()" 
+					class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-200 transform hover:scale-105"
+					aria-label="Cambiar tema"
+					type="button"
+				>
+					<svg class="w-5 h-5 text-gray-600 dark:text-gray-300 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+					</svg>
+					<svg class="w-5 h-5 text-gray-600 dark:text-gray-300 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+					</svg>
+				</button>
+
+				<!-- Support Button -->
+				<button 
+					onclick="openSupport()" 
+					class="px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-200 transform hover:scale-105 hover:shadow-lg"
+				>
+					Soporte
+				</button>
+
+				<!-- User Manual Button -->
+				<button 
+					onclick="openManual()" 
+					class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-200 transform hover:scale-105"
+					aria-label="Manual de usuario"
+				>
+					<svg class="w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</nav>
+</header>

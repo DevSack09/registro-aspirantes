@@ -1,0 +1,183 @@
+---
+// User Manual Modal Component with Typography
+---
+
+<!-- User Manual Modal -->
+<div id="manual-modal" class="hidden fixed inset-0 z-50 overflow-y-auto">
+	<div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:p-0">
+		<!-- Background overlay -->
+		<div class="fixed inset-0 transition-opacity bg-gray-900 bg-opacity-75" onclick="closeManual()"></div>
+
+		<!-- Modal panel -->
+		<div class="relative inline-block w-full max-w-4xl max-h-[80vh] my-8 overflow-hidden text-left align-middle transition-all transform bg-white dark:bg-gray-800 shadow-2xl rounded-2xl">
+			<!-- Modal Header -->
+			<div class="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
+				<h3 class="text-xl font-bold text-gray-900 dark:text-white">
+					Manual de Usuario - Sistema de Reclutamiento
+				</h3>
+				<button
+					onclick="closeManual()"
+					class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
+				>
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+					</svg>
+				</button>
+			</div>
+
+			<!-- Modal Content with Typography -->
+			<div class="p-6 overflow-y-auto max-h-[60vh] prose prose-sm dark:prose-invert max-w-none">
+				<div class="prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300">
+					
+					<!-- Introduction Section -->
+					<section class="mb-8">
+						<h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">📖 Introducción</h2>
+						<p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+							Bienvenido al Sistema de Reclutamiento. Esta plataforma ha sido diseñada para facilitar el proceso de selección y contratación de personal, ofreciendo herramientas intuitivas y eficientes para gestionar candidatos, vacantes y todo el ciclo de reclutamiento.
+						</p>
+					</section>
+
+					<!-- Getting Started Section -->
+					<section class="mb-8">
+						<h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">🚀 Primeros Pasos</h2>
+						
+						<h3 class="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-200">1. Acceso al Sistema</h3>
+						<p class="text-gray-700 dark:text-gray-300 mb-4">
+							Para acceder al sistema, necesitas credenciales válidas proporcionadas por el administrador. Sigue estos pasos:
+						</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300 mb-4">
+							<li>Ingresa tu correo electrónico corporativo</li>
+							<li>Introduce tu contraseña (mínimo 8 caracteres)</li>
+							<li>Opcional: Marca "Recordarme" para guardar tus preferencias</li>
+							<li>Haz clic en "Iniciar Sesión"</li>
+						</ol>
+
+						<div class="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-4 rounded">
+							<p class="text-sm text-blue-800 dark:text-blue-200">
+								<strong>💡 Tip:</strong> Si olvidas tu contraseña, utiliza la opción "¿Olvidaste tu contraseña?" para restablecerla.
+							</p>
+						</div>
+					</section>
+
+					<!-- Main Features Section -->
+					<section class="mb-8">
+						<h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">⚡ Características Principales</h2>
+						
+						<div class="grid md:grid-cols-2 gap-6">
+							<div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+								<h3 class="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">👤 Gestión de Candidatos</h3>
+								<p class="text-gray-700 dark:text-gray-300 text-sm">
+									Registra, evalúa y haz seguimiento de candidatos a través de todo el proceso de selección.
+								</p>
+							</div>
+							
+							<div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+								<h3 class="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">📋 Publicación de Vacantes</h3>
+								<p class="text-gray-700 dark:text-gray-300 text-sm">
+									Crea y publica ofertas de trabajo en múltiples plataformas con un solo clic.
+								</p>
+							</div>
+							
+							<div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+								<h3 class="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">📊 Análisis y Reportes</h3>
+								<p class="text-gray-700 dark:text-gray-300 text-sm">
+									Obtén insights detallados sobre tus procesos de reclutamiento con reportes personalizables.
+								</p>
+							</div>
+							
+							<div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+								<h3 class="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">🤝 Comunicación</h3>
+								<p class="text-gray-700 dark:text-gray-300 text-sm">
+									Comunícate directamente con candidatos y gestiona entrevistas desde la plataforma.
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<!-- Interface Guide Section -->
+					<section class="mb-8">
+						<h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">🎨 Guía de Interfaz</h2>
+						
+						<h3 class="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-200">Personalización</h3>
+						<p class="text-gray-700 dark:text-gray-300 mb-4">
+							El sistema ofrece opciones de personalización para mejorar tu experiencia:
+						</p>
+						<ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 mb-4">
+							<li><strong>Tema Claro/Oscuro:</strong> Cambia entre modo claro y oscuro usando el botón en la barra de navegación</li>
+							<li><strong>Preferencias Guardadas:</strong> El sistema recuerda tu tema preferido y datos de sesión</li>
+							<li><strong>Interfaz Responsiva:</strong> Accede desde cualquier dispositivo con una experiencia optimizada</li>
+						</ul>
+
+						<h3 class="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-200">Navegación</h3>
+						<p class="text-gray-700 dark:text-gray-300 mb-4">
+							La barra de navegación principal incluye:
+						</p>
+						<ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+							<li>Logo y título del sistema</li>
+							<li>Interruptor de tema (claro/oscuro)</li>
+							<li>Botón de soporte técnico</li>
+							<li>Acceso al manual de usuario</li>
+						</ul>
+					</section>
+
+					<!-- Security Section -->
+					<section class="mb-8">
+						<h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">🔒 Seguridad</h2>
+						<p class="text-gray-700 dark:text-gray-300 mb-4">
+							La seguridad de tus datos es nuestra prioridad:
+						</p>
+						<div class="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-4 rounded">
+							<h4 class="font-semibold text-yellow-800 dark:text-yellow-200 mb-2">Medidas de Seguridad:</h4>
+							<ul class="list-disc list-inside space-y-1 text-sm text-yellow-700 dark:text-yellow-300">
+								<li>Encriptación de datos en tránsito y en reposo</li>
+								<li>Autenticación segura con contraseñas robustas</li>
+								<li>Sesiones con tiempo de expiración configurable</li>
+								<li>Registro de actividades para auditoría</li>
+							</ul>
+						</div>
+					</section>
+
+					<!-- Support Section -->
+					<section class="mb-8">
+						<h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">🆘 Soporte y Ayuda</h2>
+						<p class="text-gray-700 dark:text-gray-300 mb-4">
+							Si necesitas asistencia adicional, estamos aquí para ayudarte:
+						</p>
+						<div class="grid md:grid-cols-3 gap-4">
+							<div class="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+								<div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-2">
+									<svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+									</svg>
+								</div>
+								<p class="text-sm font-medium text-gray-900 dark:text-white">Email</p>
+								<p class="text-xs text-gray-600 dark:text-gray-400">soporte@reclutamiento.com</p>
+							</div>
+							
+							<div class="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+								<div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-2">
+									<svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+									</svg>
+								</div>
+								<p class="text-sm font-medium text-gray-900 dark:text-white">Teléfono</p>
+								<p class="text-xs text-gray-600 dark:text-gray-400">+1 (555) 123-4567</p>
+							</div>
+							
+							<div class="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+								<div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-2">
+									<svg class="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+									</svg>
+								</div>
+								<p class="text-sm font-medium text-gray-900 dark:text-white">Horario</p>
+								<p class="text-xs text-gray-600 dark:text-gray-400">9:00 AM - 6:00 PM</p>
+							</div>
+						</div>
+					</section>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,93 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Sistema de Reclutamiento" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="view-transition" content="same-origin" />
+	<title>{title}</title>
+	<style>
+		/* Theme management */
+		:root {
+			color-scheme: light dark;
+		}
+		
+		html.dark {
+			color-scheme: dark;
+		}
+	</style>
+	<script>
+		// Theme management - Initialize immediately
+		(function() {
+			// Set initial theme before page renders
+			const theme = localStorage.getItem('theme') || 'light';
+			if (theme === 'dark') {
+				document.documentElement.classList.add('dark');
+			}
+		})();
+
+		// Theme toggle functionality
+		window.toggleTheme = function() {
+			const html = document.documentElement;
+			const currentTheme = localStorage.getItem('theme') || 'light';
+			const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+			
+			if (newTheme === 'dark') {
+				html.classList.add('dark');
+			} else {
+				html.classList.remove('dark');
+			}
+			
+			localStorage.setItem('theme', newTheme);
+			console.log('Theme changed to:', newTheme);
+		};
+
+		// Support modal functionality
+		window.openSupport = function() {
+			const modal = document.getElementById('support-modal');
+			if (modal) {
+				modal.classList.remove('hidden');
+				modal.classList.add('flex');
+			}
+		};
+
+		window.closeSupport = function() {
+			const modal = document.getElementById('support-modal');
+			if (modal) {
+				modal.classList.add('hidden');
+				modal.classList.remove('flex');
+			}
+		};
+
+		// User manual functionality
+		window.openManual = function() {
+			const modal = document.getElementById('manual-modal');
+			if (modal) {
+				modal.classList.remove('hidden');
+				modal.classList.add('flex');
+			}
+		};
+
+		window.closeManual = function() {
+			const modal = document.getElementById('manual-modal');
+			if (modal) {
+				modal.classList.add('hidden');
+				modal.classList.remove('flex');
+			}
+		};
+	</script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+	<slot />
+</body>
+</html>
